@@ -8,16 +8,16 @@ stage("SCM checkout")
 
 stage("code validate ")
 {steps{withMaven(globalMavenSettingsConfig: '', jdk: 'Java_home', maven: 'maven_home', mavenSettingsConfig: '', traceability: true) 
-{ mvn 'validate'}}
+{ sh 'mvn validate'}}
 }
 
 stage("code validate ")
 {steps{withMaven(globalMavenSettingsConfig: '', jdk: 'Java_home', maven: 'maven_home', mavenSettingsConfig: '', traceability: true) 
-{ mvn 'compile'}}
+{ sh 'mvn compile'}}
 
 stage("code validate ")
 {steps{withMaven(globalMavenSettingsConfig: '', jdk: 'Java_home', maven: 'maven_home', mavenSettingsConfig: '', traceability: true) 
-{ mvn 'test'}}
+{ sh 'mvn test'}}
 }
 }
 
