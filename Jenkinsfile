@@ -3,6 +3,7 @@ pipeline
 agent any
 stages
 {
+    
 stage("SCM checkout")
 {steps{git branch: 'master', url: 'https://github.com/krrkumarmy/MavenProject2025.git'}}
 
