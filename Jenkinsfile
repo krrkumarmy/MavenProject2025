@@ -20,3 +20,5 @@ stage("code validate ")
 { mvn 'test'}}
 }
 }
+
+}}
