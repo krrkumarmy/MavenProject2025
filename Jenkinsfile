@@ -20,6 +20,12 @@ stage("Test")
 {steps{withMaven(globalMavenSettingsConfig: '', jdk: 'Java_home', maven: 'maven_home', mavenSettingsConfig: '', traceability: true) 
 { sh 'mvn test'}}
 }
+
+stage("Package creation")
+{steps{withMaven(globalMavenSettingsConfig: '', jdk: 'Java_home', maven: 'maven_home', mavenSettingsConfig: '', traceability: true) 
+{ sh 'mvn package'}}
+}
+
 }
 
 }
