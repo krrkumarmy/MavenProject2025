@@ -33,6 +33,11 @@ stage("Verify step")
 { sh 'mvn verify'}}
 }
 
+stage("insall")
+{steps{withMaven(globalMavenSettingsConfig: '', jdk: 'Java_home', maven: 'maven_home', mavenSettingsConfig: '', traceability: true) 
+{ sh 'mvn install'}}
+}
+
 }
 }
 
