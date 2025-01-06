@@ -31,6 +31,7 @@ stage("Package creation")
 stage("Verify step")
 {steps{withMaven(globalMavenSettingsConfig: '', jdk: 'Java_home', maven: 'maven_home', mavenSettingsConfig: '', traceability: true) 
 { sh 'mvn verify'}}
+}
 
 }
 }
