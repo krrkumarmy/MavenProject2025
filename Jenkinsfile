@@ -41,7 +41,7 @@ stage("insall")
 stage("deploy the artificats to Dev server")
 {steps{sshagent(['Deploy2Jboss'])
 {
-  sh 'scp -o StrictHostKeyChecking=no webapp/target/webapp.war ec2-user@172.31.20.39:/opt/wildfly'
+  sh 'scp -o StrictHostKeyChecking=no webapp/target/webapp.war wildfly@172.31.20.39:/opt/wildfly'
 }
 }
 
