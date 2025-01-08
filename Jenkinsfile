@@ -38,6 +38,12 @@ stage("insall")
 { sh 'mvn install'}}
 }
 
+stage("deploy the artificats to Dev server")
+{sshagent(['Deploy2Jboss']) {
+  sh 'scp -o StrictHostKeyChecking=no webapp/target/webapp.war ec2-user@172.31.20.221:/opt/wildfly'
+}
+
+}
 }
 }
 
